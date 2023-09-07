@@ -1,0 +1,419 @@
+/* ---------------------------------------About section ----------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* ========== Mobile version ========== */
+
+.bg {
+  background-image: url("../image/bg_about.png");
+  height: 100vh;
+  background-position: right;
+}
+
+.fa-bars {
+  font-size: 35px;
+  padding: 8% 6%;
+}
+
+/* =========  Click menu style ======== */
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 80px 30px;
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.505);
+}
+
+.mobile-nav-list > li,
+a:hover {
+  color: #ec5242;
+}
+
+.mobile-nav .mobile-nav-list > li {
+  font-size: 25px;
+  margin: 40px 10px;
+  border-bottom: 1px solid #ec5242;
+}
+
+.contactUs > a {
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+#cancel {
+  display: flex;
+  justify-content: end;
+  padding: 0 40px;
+}
+
+.fa-xmark {
+  font-size: 30px;
+  color: black;
+}
+
+/* ---------- End of click menu ---------  */
+
+#top-nav {
+  display: none;
+}
+
+.bottom-nav {
+  display: none;
+}
+
+/* ========== section one ========= */
+
+.about-heading > h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #ec5242;
+  margin-bottom: 10px;
+  padding: 5%;
+}
+
+.about-intro {
+  margin: 50px 5% 0 5%;
+  color: #272a31;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #d3d3d3;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.contactUs {
+  padding: 50px 5% 0 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactUs > p {
+  font-size: 17px;
+  text-align: center;
+}
+
+/* ========== Brand Name and Logo Section Two ======== */
+.brandName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.brandName > h2 {
+  padding: 0 5%;
+  text-align: center;
+}
+
+.brandBorder {
+  border: 2px solid #ec5242;
+  width: 50px;
+  margin: 10px 0;
+}
+
+.logo > p {
+  font-size: 12px;
+}
+
+#brand > p {
+  padding: 5%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 2px solid #d3d3d3;
+  padding: 8%;
+  margin: 8% 5%;
+  color: black;
+}
+
+.imgLogo {
+  width: 35%;
+  object-fit: cover;
+}
+
+#brand-date > p {
+  font-size: 25px;
+}
+
+#brand-date > span {
+  color: grey;
+  font-size: 12px;
+}
+
+#brand {
+  border-bottom: 2px solid #d3d3d3;
+  margin: 0 0 10% 0;
+}
+
+/*  ========= Past Season ========== */
+#past {
+  padding: 5%;
+  font-size: 18px;
+}
+
+.pastCard-parent {
+  padding: 5%;
+}
+
+.pastCard > img {
+  width: 100%;
+  position: relative;
+}
+
+.pastCard {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.pastText {
+  position: absolute;
+  bottom: 2px;
+  background: rgb(198 64 49 / 80%);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.pastText > h3 {
+  margin-bottom: 5px;
+}
+
+/* ========== Partners section ========== */
+.partners {
+  background: rgb(90 89 89);
+  padding: 5% 5% 10% 5%;
+}
+
+.part > h2 {
+  color: #fff;
+}
+
+.sponsorImg > img {
+  width: 40%;
+  height: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+/* ========== Footer ========= */
+.lastSection {
+  display: flex;
+  align-items: center;
+  padding: 5%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: black;
+}
+
+/* ========== Desktop Version ========== */
+@media (min-width: 768px) {
+  /* ========== Navbar ======== */
+  body {
+    font-family: "Lato", sans-serif;
+  }
+
+  .bg {
+    background-position: top right;
+  }
+
+  #menu .fa-bars {
+    display: none;
+  }
+
+  #top-nav {
+    background-color: rgb(82 82 82);
+    color: #fff;
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+    padding: 5px 10%;
+    height: 30px;
+    align-items: center;
+  }
+
+  .logo > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: rgb(82 82 82);
+  }
+
+  #top-nav > a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* ========== Bottom nav =========== */
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 5px 10%;
+    align-items: center;
+    height: 70px;
+  }
+
+  .imgLogo {
+    width: 20%;
+    object-fit: cover;
+  }
+
+  .lists {
+    display: flex;
+    gap: 5px;
+    height: 60px;
+    align-items: center;
+  }
+
+  .list-item {
+    display: flex;
+    gap: 10px;
+  }
+
+  .list-item > li {
+    list-style-type: none;
+    font-size: 16px;
+  }
+
+  .list-item > li:hover {
+    color: #ec5242;
+    cursor: pointer;
+  }
+
+  .lists > button {
+    width: 135px;
+    height: 50px;
+    border: 4px solid #ec5242;
+    background: #fff;
+    color: #ec5242;
+    padding: 5px 10px;
+  }
+
+  .lists > button:hover {
+    background: #ec5242;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* ========= Section one ========= */
+
+  .about-heading > h1 {
+    margin: 20px 0 10px 0;
+    text-align: center;
+    font-size: 1.7em;
+  }
+
+  .about-intro {
+    width: 50%;
+    padding: 3% 0;
+    line-height: 25px;
+    margin: 0;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*  ======== brand section ========= */
+  #brand {
+    padding: 50px 0 0 0;
+    height: 80vh;
+    margin: 5% 0;
+  }
+
+  .logo > p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  #brand > p {
+    padding: 20px;
+  }
+
+  .brand {
+    margin: 100px 0 0 0;
+    padding: 2% 0;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+  }
+
+  /* ========= Past competition ========== */
+  .brandName {
+    padding: 0;
+    margin: 0;
+  }
+
+  #past {
+    text-align: center;
+    padding: 0;
+  }
+
+  .pastCard-parent {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10%;
+  }
+
+  /* ========= Partner section ========= */
+  .partners {
+    display: none;
+  }
+
+  /* ========== Footer Section ========== */
+  footer {
+    background: rgb(90 89 89);
+  }
+
+  .lastSection {
+    justify-content: space-between;
+    padding: 5% 10%;
+    color: #fff;
+  }
+}
