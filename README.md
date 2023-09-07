@@ -106,8 +106,6 @@ For more information on the importance of a professional README for your reposit
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
- This is the [live demo link](https://jimoluwaseyi.github.io/module-one-capstone/)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +131,7 @@ Clone this repository to your desired folder:
 Run this commands:
 
 ```sh
-  cd Module1-capstone-project
+  cd module-one-capstone
   git clone https://github.com/JimOluwaseyi/module-one-capstone.git
 ```
 
