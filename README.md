@@ -106,7 +106,7 @@ For more information on the importance of a professional README for your reposit
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
- This is the [live demo link]()
+ This is the [live demo link](https://jimoluwaseyi.github.io/module-one-capstone/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
