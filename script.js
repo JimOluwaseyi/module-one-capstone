@@ -1,321 +1,124 @@
 const menuBtn = document.querySelector('.fa-bars');
 const mobileNav = document.querySelector('.mobile-nav');
-const cancel = document.querySelector('#cancel .fa-xmark');
-const menuBg = document.querySelector('.intro');
-const moreBtn = document.getElementById('moreBtn');
+const cancel = document.querySelector('.fa-xmark');
 
 // -------------- Menu Bar --------------
 menuBtn.addEventListener('click', () => {
   mobileNav.style.display = 'block';
-  menuBg.style.filter = 'blur(100px)';
 });
 
 cancel.addEventListener('click', () => {
   mobileNav.style.display = 'none';
-  menuBg.style.filter = 'blur(0)';
 });
 
 // --------- Dynamic Display ---------
-const speaker = document.querySelector('.speakers');
-const programHeading = document.querySelector('.program-heading');
-const columnOne = document.querySelector('.columnOne');
+
+const featureSpeakers = [
+  {
+    name: 'Stan Kroenke',
+    image1: 'image/Black-white.PNG',
+    image2: 'image/Stan_Kroenke_Arsenal.png',
+    description: 'Owner Of Arsenal F.C',
+    information: `Stan Kroenke is an American billionaire businessman. He is the
+    owner of Kroenke Sports & Entertainment, which is the holding
+    company of Arsenal F.C. of the Premier League and Arsenal
+    W.F.C.
+.`,
+  },
+  {
+    name: 'Carol Shanahan',
+    image1: 'image/Black-white.PNG',
+    image2: 'image/Carol_shanahan-port-vale.jpg',
+    description: 'Owner Of Port Vale F.C',
+    information: `Is an English businesswoman and club chairperson of Port Vale
+    Football Club.
+.`,
+  },
+  {
+    name: 'Glazer Family',
+    image1: 'image/Black-white.PNG',
+    image2: 'image/Glazer-family.jpeg',
+    description: 'Owner Of Manchester United',
+    information: `United is currently owned by his six children. The Glazers
+    family bought the club for £790 million in 2005 in a highly
+    leveraged deal that has been
+.`,
+  },
+  {
+    name: 'John Radford',
+    image1: 'image/Black-white.PNG',
+    image2: 'image/JohnRadfordBusinessman-mansfield-town.png',
+    description: 'Owner Of Mansfield Town F.C',
+    information: `John Lawrence Radford (born 1965) is an English businessman
+    and owner of Mansfield Town Football Club, which he bought in
+    2010.
+.`,
+  },
+  {
+    name: 'Steve Landsdown',
+    image1: 'image/Black-white.PNG',
+    image2: 'image/Lansdown_at_a_Bristol_City_Game.jpg',
+    description: 'Owner Of Bristol City F.C',
+    information: `Bristol City Football Club is a professional football club
+    based in Bristol, England, which compete in the EFL
+    Championship, the second tier of English football.
+.`,
+  },
+  {
+    name: 'Micheal Eisner',
+    image1: 'image/Black-white.PNG',
+    image2: 'image/MichaelEisnerOct10-portsmouth.jpg',
+    description: 'Owner Of Portsmouth F.C',
+    information: `Michael Dammann Eisner (born March 7, 1942)[2] is an American
+    businessman[3] and former chairman and chief executive officer
+    (CEO) of The Walt Disney Company from September 1984 to
+    September 2005.
+.`,
+  },
+];
+
 const speakerParent = document.querySelector('.speaker-parent');
 
-const showColumnOne = () => {
-  programHeading.innerHTML = ` <h3>Featured Speakers</h3>
-<div class="border"></div>`;
-  speaker.append(programHeading);
-  columnOne.innerHTML = `<section class="speaker-intro">
-<div class="speakerImg">
-  <img src="image/Black-white.PNG" alt="" />
-  <img
-    src="image/Stan_Kroenke_Arsenal.png"
-    alt=""
-    class="imgPosition"
-  />
-</div>
-<div class="speaker-name">
-  <h4>Stan Kroenke</h4>
-  <p>Owner Of Arsenal F.C</p>
-  <div class="speakerBorder"></div>
-  <div class="speaker-description">
-    <p>
-      Stan Kroenke is an American billionaire businessman. He is the
-      owner of Kroenke Sports & Entertainment, which is the holding
-      company of Arsenal F.C. of the Premier League and Arsenal
-      W.F.C.
-    </p>
-  </div>
-</div>
-</section>
-<!-- ===== Speaker Two -->
-<section class="speaker-intro speaker-mobile">
-<div class="speakerImg">
-  <img src="image/Black-white.PNG" alt="" />
-  <img
-    src="image/Carol_shanahan-port-vale.jpg"
-    alt=""
-    class="imgPosition"
-  />
-</div>
-<div class="speaker-name">
-  <h4>Carol Shanahan</h4>
-  <p>Owner Of Port Vale F.C</p>
-  <div class="speakerBorder"></div>
-  <div class="speaker-description">
-    <p>
-      is an English businesswoman and club chairperson of Port Vale
-      Football Club.
-    </p>
-  </div>
-</div>
-</section>
-<!-- ===== Speaker Three ===== -->
-<section class="speaker-intro speaker-mobile">
-<div class="speakerImg">
-  <img src="image/Black-white.PNG" alt="" />
-  <img src="image/Glazer-family.jpeg" alt="" class="imgPosition" />
-</div>
-<!-- Name -->
-<div class="speaker-name">
-  <h4>Glazer Family</h4>
-  <p>Owner Of Manchester United</p>
-  <div class="speakerBorder"></div>
-  <div class="speaker-description">
-    <p>
-      United is currently owned by his six children. The Glazers
-      family bought the club for £790 million in 2005 in a highly
-      leveraged deal that has been
-    </p>
-  </div>
-</div>
-</section>
-</div>`;
-  speakerParent.append(columnOne);
-  speaker.append(speakerParent);
-};
+let speakerContent = '';
 
-showColumnOne();
-//  ====---------- Column Two -------======
-const columnTwo = document.querySelector('.columnTwo');
-
-const showColumnTwo = () => {
-  columnTwo.innerHTML = `
-  <section class="speaker-intro">
-    <div class="speakerImg">
-      <img src="image/Black-white.PNG" alt="" />
-      <img
-        src="image/JohnRadfordBusinessman-mansfield-town.png"
-        alt=""
-        class="imgPosition"
-      />
-    </div>
-    <div class="speaker-name">
-      <h4>John Radford</h4>
-      <p>Owner Of Mansfield Town F.C</p>
-      <div class="speakerBorder"></div>
-      <div class="speaker-description">
-        <p>
-          John Lawrence Radford (born 1965) is an English businessman
-          and owner of Mansfield Town Football Club, which he bought in
-          2010.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="speaker-intro">
-    <div class="speakerImg">
-      <img src="image/Black-white.PNG" alt="" />
-      <img
-        src="image/Lansdown_at_a_Bristol_City_Game.jpg"
-        alt=""
-        class="imgPosition"
-      />
-    </div>
-    <div class="speaker-name">
-      <h4>Steve Landsdown</h4>
-      <p>Owner Of Bristol City F.C</p>
-      <div class="speakerBorder"></div>
-      <div class="speaker-description">
-        <p>
-          Bristol City Football Club is a professional football club
-          based in Bristol, England, which compete in the EFL
-          Championship, the second tier of English football.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="speaker-intro">
-    <div class="speakerImg">
-      <img src="image/Black-white.PNG" alt="" />
-      <img
-        src="image/MichaelEisnerOct10-portsmouth.jpg"
-        alt=""
-        class="imgPosition"
-      />
-    </div>
-    <div class="speaker-name">
-      <h4>Micheal Eisner</h4>
-      <p>Owner Of Portsmouth F.C</p>
-      <div class="speakerBorder"></div>
-      <div class="speaker-description">
-        <p>
-          Michael Dammann Eisner (born March 7, 1942)[2] is an American
-          businessman[3] and former chairman and chief executive officer
-          (CEO) of The Walt Disney Company from September 1984 to
-          September 2005.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>`;
-  speaker.append(moreBtn);
-};
-showColumnTwo();
-
-// -------- button clicked ----------
-
-function mobileDynaamic() {
-  columnOne.innerHTML = `
-  <section class="speaker-intro">
+featureSpeakers.forEach((speaker) => {
+  speakerContent += `<section class="speaker-intro">
   <div class="speakerImg">
-    <img src="image/Black-white.PNG" alt="" />
+    <img src="${speaker.image1}" alt="" />
     <img
-      src="image/Stan_Kroenke_Arsenal.png"
+      src="${speaker.image2}"
       alt=""
       class="imgPosition"
     />
   </div>
   <div class="speaker-name">
-    <h4>Stan Kroenke</h4>
-    <p>Owner Of Arsenal F.C</p>
+    <h4>${speaker.name}</h4>
+    <p>${speaker.description}</p>
     <div class="speakerBorder"></div>
     <div class="speaker-description">
       <p>
-        Stan Kroenke is an American billionaire businessman. He is the
-        owner of Kroenke Sports & Entertainment, which is the holding
-        company of Arsenal F.C. of the Premier League and Arsenal
-        W.F.C.
+      ${speaker.information}
       </p>
     </div>
   </div>
-</section>          
-<section class="speaker-intro">
-  <div class="speakerImg">
-    <img src="image/Black-white.PNG" alt="" />
-    <img
-      src="image/Carol_shanahan-port-vale.jpg"
-      alt=""
-      class="imgPosition"
-    />
-  </div>
-  <div class="speaker-name">
-    <h4>Carol Shanahan</h4>
-    <p>Owner Of Port Vale F.C</p>
-    <div class="speakerBorder"></div>
-    <div class="speaker-description">
-      <p>
-        is an English businesswoman and club chairperson of Port Vale
-        Football Club.
-      </p>
-    </div>
-  </div>
-</section>
-<section class="speaker-intro">
-  <div class="speakerImg">
-    <img src="image/Black-white.PNG" alt="" />
-    <img src="image/Glazer-family.jpeg" alt="" class="imgPosition" />
-  </div>
-  <div class="speaker-name">
-    <h4>Glazer Family</h4>
-    <p>Owner Of Manchester United</p>
-    <div class="speakerBorder"></div>
-    <div class="speaker-description">
-      <p>
-        United is currently owned by his six children. The Glazers
-        family bought the club for £790 million in 2005 in a highly
-        leveraged deal that has been
-      </p>
-    </div>
-  </div>
-</section>
-<section class="speaker-intro">
-<div class="speakerImg">
-  <img src="image/Black-white.PNG" alt="" />
-  <img
-    src="image/JohnRadfordBusinessman-mansfield-town.png"
-    alt=""
-    class="imgPosition"
-  />
-</div>
-<!-- Name -->
-<div class="speaker-name">
-  <h4>John Radford</h4>
-  <p>Owner Of Mansfield Town F.C</p>
-  <div class="speakerBorder"></div>
-  <div class="speaker-description">
-    <p>
-      John Lawrence Radford (born 1965) is an English businessman
-      and owner of Mansfield Town Football Club, which he bought in
-      2010.
-    </p>
-  </div>
-</div>
-</section>
-<section class="speaker-intro">
-            <div class="speakerImg">
-              <img src="image/Black-white.PNG" alt="" />
-              <img
-                src="image/Lansdown_at_a_Bristol_City_Game.jpg"
-                alt=""
-                class="imgPosition"
-              />
-            </div>
-            <div class="speaker-name">
-              <h4>Steve Landsdown</h4>
-              <p>Owner Of Bristol City F.C</p>
-              <div class="speakerBorder"></div>
-              <div class="speaker-description">
-                <p>
-                  Bristol City Football Club is a professional football club
-                  based in Bristol, England, which compete in the EFL
-                  Championship, the second tier of English football.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section class="speaker-intro">
-            <div class="speakerImg">
-              <img src="image/Black-white.PNG" alt="" />
-              <img
-                src="image/MichaelEisnerOct10-portsmouth.jpg"
-                alt=""
-                class="imgPosition"
-              />
-            </div>
-            <!-- Name -->
-            <div class="speaker-name">
-              <h4>Micheal Eisner</h4>
-              <p>Owner Of Portsmouth F.C</p>
-              <div class="speakerBorder"></div>
-              <div class="speaker-description">
-                <p>
-                  Michael Dammann Eisner (born March 7, 1942)[2] is an American
-                  businessman[3] and former chairman and chief executive officer
-                  (CEO) of The Walt Disney Company from September 1984 to
-                  September 2005.
-                </p>
-              </div>
-            </div>
-          </section>
-`;
-}
+</section>`;
+});
+
+speakerContent += `<button id="moreBtn">
+MORE <i class="fa-solid fa-chevron-down"></i>
+</button>`;
+
+speakerParent.innerHTML = speakerContent;
+
 //  --------- Show more button on the mobile --------------
+const moreBtn = document.getElementById('moreBtn');
+const speakerIntros = document.querySelectorAll(
+  '.speaker-intro:nth-child(n+3)',
+);
 
 moreBtn.addEventListener('click', () => {
-  mobileDynaamic();
+  speakerIntros.forEach((intro) => {
+    intro.style.display = 'flex';
+  });
   moreBtn.style.display = 'none';
 });
