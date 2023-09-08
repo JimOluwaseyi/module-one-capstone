@@ -210,7 +210,7 @@ If you like this project just give a star ⭐️.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank Gift Olukoju for her support.
+I would like to acknowledge Cindy Shin in Behance for this beautiful design and also appreciate Gift Olukoju for her support.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
