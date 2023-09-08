@@ -28,33 +28,23 @@ body {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #272a31;
 }
 
 .mobile-nav {
   display: none;
-}
-
-.mobile-nav-list {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   padding: 80px 30px;
+  z-index: 100;
+  backdrop-filter: blur(50px);
+}
+
+.mobile-nav-list {
   list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.505);
-}
-
-.mobile-nav-list > li,
-a:hover {
-  color: #ec5242;
-}
-
-.mobile-nav .mobile-nav-list > li {
-  font-size: 25px;
-  margin: 40px 10px;
-  border-bottom: 1px solid #ec5242;
 }
 
 .contactUs > a {
@@ -62,15 +52,25 @@ a:hover {
   font-size: 17px;
 }
 
+.mobile-nav-list li a:hover {
+  color: #ec5242;
+}
+
+.mobile-nav-list li {
+  font-size: 25px;
+  margin: 40px 10px;
+  border-bottom: 1px solid #ec5242;
+}
+
 #cancel {
   display: flex;
   justify-content: end;
-  padding: 0 40px;
+  margin: 0 40px;
 }
 
 .fa-xmark {
-  font-size: 30px;
-  color: black;
+  font-size: 40px;
+  color: #272a31;
 }
 
 /* ---------- End of click menu ---------  */
@@ -96,7 +96,6 @@ a:hover {
 .about-intro {
   margin: 50px 5% 0 5%;
   color: #272a31;
-  background-color: white;
   text-align: center;
   padding: 10px;
   border: 2px solid #d3d3d3;
@@ -244,7 +243,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 4px;
-  color: black;
+  color: #272a31;
 }
 
 /* ========== Desktop Version ========== */
@@ -252,6 +251,10 @@ a:hover {
   /* ========== Navbar ======== */
   body {
     font-family: "Lato", sans-serif;
+  }
+
+  #desktopHid {
+    display: none;
   }
 
   .bg {
@@ -318,7 +321,7 @@ a:hover {
     font-size: 16px;
   }
 
-  .list-item > li:hover {
+  .list-item li:hover {
     color: #ec5242;
     cursor: pointer;
   }
@@ -332,7 +335,7 @@ a:hover {
     padding: 5px 10px;
   }
 
-  .lists > button:hover {
+  .lists button:hover {
     background: #ec5242;
     color: #fff;
     cursor: pointer;

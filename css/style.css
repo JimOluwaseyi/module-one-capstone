@@ -16,6 +16,7 @@ body {
   background-image: url("../image/capstone-bg.png");
   height: 100vh;
   background-position: top;
+  position: relative;
 }
 
 .fa-bars {
@@ -28,22 +29,23 @@ body {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #272a31;
 }
 
 .mobile-nav {
   display: none;
-}
-
-.mobile-nav-list {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   padding: 80px 30px;
+  z-index: 100;
+  backdrop-filter: blur(50px);
+}
+
+.mobile-nav-list {
   list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.505);
 }
 
 .program-icon > li {
@@ -51,12 +53,11 @@ a {
   font-size: 20px;
 }
 
-.mobile-nav-list > li,
-a:hover {
+.mobile-nav-list li a:hover {
   color: #ec5242;
 }
 
-.mobile-nav .mobile-nav-list > li {
+.mobile-nav-list li {
   font-size: 25px;
   margin: 40px 10px;
   border-bottom: 1px solid #ec5242;
@@ -65,12 +66,12 @@ a:hover {
 #cancel {
   display: flex;
   justify-content: end;
-  padding: 0 40px;
+  margin: 0 40px;
 }
 
 .fa-xmark {
   font-size: 40px;
-  color: black;
+  color: #272a31;
   cursor: pointer;
 }
 
@@ -202,7 +203,7 @@ a:hover {
 }
 
 .program-heading > h3 {
-  color: #000;
+  color: #272a31;
   margin-bottom: 10px;
   font-size: 20px;
 }
@@ -210,14 +211,16 @@ a:hover {
 .speaker-intro {
   display: flex;
   gap: 45px;
+  width: 100%;
+  justify-content: center;
   margin: 20px 0 0 0;
 }
 
-.speaker-mobile {
+.speaker-parent .speaker-intro:nth-child(n+3) {
   display: none;
 }
 
-.columnTwo {
+.speaker-mobile {
   display: none;
 }
 
@@ -227,7 +230,7 @@ a:hover {
 
 .speakerImg > img {
   width: 150px;
-  height: 125px;
+  height: 135px;
   object-fit: cover;
 }
 
@@ -261,9 +264,11 @@ a:hover {
 .speaker-description {
   font-size: 16px;
   line-height: 22px;
+  width: 200px;
+  height: 200px;
 }
 
-.speakers > button {
+.speakers button {
   width: 100%;
   height: 50px;
   margin: 15px 0 25px 0;
@@ -323,8 +328,11 @@ a:hover {
     font-family: "Lato", sans-serif;
   }
 
-  /* ========== Navbar ======== */
+  #desktopHid {
+    display: none;
+  }
 
+  /* ========== Navbar ======== */
   #menu .fa-bars {
     display: none;
   }
@@ -344,7 +352,12 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 4px;
-    color: rgb(82 82 82);
+    color: #272a31;
+  }
+
+  .list-item li a:hover {
+    color: #ec5242;
+    cursor: pointer;
   }
 
   #top-nav > a {
@@ -385,17 +398,12 @@ a:hover {
     gap: 10px;
   }
 
-  .list-item > li {
+  .list-item li {
     list-style-type: none;
     font-size: 16px;
   }
 
-  .list-item > li:hover {
-    color: #ec5242;
-    cursor: pointer;
-  }
-
-  .lists > button {
+  .lists button {
     width: 135px;
     height: 50px;
     border: 4px solid #ec5242;
@@ -404,11 +412,11 @@ a:hover {
     padding: 5px 10px;
   }
 
-  .programBtn > button {
+  .programBtn button {
     display: none;
   }
 
-  .speakers > button {
+  .speakers button {
     display: none;
   }
 
@@ -450,7 +458,7 @@ a:hover {
     margin-left: 0;
     margin-right: 0;
     width: 20%;
-    height: 50vh;
+    height: 235px;
   }
 
   .program-icon {
@@ -476,21 +484,18 @@ a:hover {
 
   /* ========== Features Speaker ========== */
   .speaker-parent {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
     gap: 40px;
-    padding: 5% 10%;
+    padding: 5%;
+  }
+
+  .speaker-parent .speaker-intro:nth-child(n+2) {
+    display: flex;
   }
 
   .speaker-mobile {
     display: flex;
-  }
-
-  .speaker-intro {
-    margin-top: 30px;
-  }
-
-  .columnTwo {
-    display: block;
   }
 
   .speakerImg > img {
@@ -503,6 +508,11 @@ a:hover {
     width: 100%;
     height: 60%;
     top: 5%;
+  }
+
+  .speaker-description {
+    width: 300px;
+    height: 130px;
   }
 
   /* ========= Partner section ========= */
