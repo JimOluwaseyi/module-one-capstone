@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* ========== Mobile version ========== */
+
+.bg {
+  background-image: url("../image/capstone-bg.png");
+  height: 100vh;
+  background-position: top;
+  position: relative;
+}
+
+.fa-bars {
+  font-size: 35px;
+  padding: 8% 6%;
+  cursor: pointer;
+}
+
+/* =========  Click menu style ======== */
+
+a {
+  text-decoration: none;
+  color: #272a31;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 80px 30px;
+  z-index: 100;
+  backdrop-filter: blur(50px);
+}
+
+.mobile-nav-list {
+  list-style-type: none;
+}
+
+.program-icon > li {
+  color: #ec5242;
+  font-size: 20px;
+}
+
+.mobile-nav-list li a:hover {
+  color: #ec5242;
+}
+
+.mobile-nav-list li {
+  font-size: 25px;
+  margin: 40px 10px;
+  border-bottom: 1px solid #ec5242;
+}
+
+#cancel {
+  display: flex;
+  justify-content: end;
+  margin: 0 40px;
+}
+
+.fa-xmark {
+  font-size: 40px;
+  color: #272a31;
+  cursor: pointer;
+}
+
+/* ---------- End of click menu ---------  */
+
+#top-nav {
+  display: none;
+}
+
+.bottom-nav {
+  display: none;
+}
+
+/* --------------------------------------------------------- */
+
+/* ===== Introduction Heading ===== */
+
+.landing-bg {
+  background-image: url("../image/capstone-bg.png");
+  height: 100vh;
+  background-position: top;
+}
+
+.intro {
+  padding: 5%;
+}
+
+#intro-heading {
+  color: #ec5242;
+  font-size: 28px;
+  margin-top: 30px;
+}
+
+.intro > h1 {
+  color: rgb(255, 111, 0);
+  font-size: 45px;
+}
+
+#intro-description {
+  margin-top: 40px;
+  color: #272a31;
+  background-color: #d3d3d3;
+  padding: 10px;
+  border: 2px solid white;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: 1000;
+  font-size: 25px;
+}
+
+#plain {
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+/* ========== Main program ========== */
+.program {
+  background-image: url("../image/tile1.PNG");
+  margin: 50px 0 0 0;
+}
+
+.program-heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.program-heading > h2 {
+  margin-bottom: 15px;
+}
+
+.border {
+  border: 1px solid #ec5242;
+  width: 50px;
+}
+
+.program-bg {
+  background: rgb(211 211 211 / 30%);
+  display: flex;
+  gap: 5%;
+  padding: 15px;
+  margin: 12px 15px 0 15px;
+}
+
+.program-bg > p {
+  color: #fff;
+  line-height: 20px;
+  width: 60%;
+}
+
+.program-icon {
+  display: flex;
+  gap: 2px;
+  list-style-type: none;
+  align-items: center;
+  width: 40%;
+}
+
+.programBtn {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 30px 0;
+}
+
+.programBtn > button {
+  background: #ec5242;
+  width: 210px;
+  height: 65px;
+  border: none;
+  font-size: 15px;
+  color: #fff;
+}
+
+.programBtn > p {
+  display: none;
+}
+
+/* ========== speaker section ========== */
+
+.speakers {
+  margin-top: 10px;
+  padding: 5%;
+}
+
+.program-heading > h3 {
+  color: #272a31;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.speaker-intro {
+  display: flex;
+  gap: 45px;
+  width: 100%;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+
+.speaker-parent .speaker-intro:nth-child(n+3) {
+  display: none;
+}
+
+.speaker-mobile {
+  display: none;
+}
+
+.speakerImg {
+  position: relative;
+}
+
+.speakerImg > img {
+  width: 150px;
+  height: 135px;
+  object-fit: cover;
+}
+
+.imgPosition {
+  position: absolute;
+  left: 8%;
+  top: 4%;
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+}
+
+.speaker-name > h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.speaker-name > p {
+  margin-bottom: 15px;
+  color: #ec5242;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.speakerBorder {
+  border: 2px solid #d3d3d3;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.speaker-description {
+  font-size: 16px;
+  line-height: 22px;
+  width: 200px;
+  height: 200px;
+}
+
+.speakers button {
+  width: 100%;
+  height: 50px;
+  margin: 15px 0 25px 0;
+  border: 2px solid #d3d3d3;
+  font-size: 17px;
+  color: black;
+  padding: 5px;
+}
+
+.fa-chevron-down {
+  color: #ec5242;
+  font-size: 17px;
+}
+
+/* ========== Partners section ========== */
+.partners {
+  background: rgb(90 89 89);
+  padding: 5% 5% 10% 5%;
+}
+
+.sponsorImg > img {
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+/* ========== Footer ========= */
+
+.lastSection {
+  display: flex;
+  align-items: center;
+  padding: 5%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: black;
+}
+
+.logo > p {
+  font-size: 12px;
+}
+
+.imgLogo {
+  width: 20%;
+  object-fit: cover;
+}
+
+/* ========== Desktop Mode ========== */
+
+@media (min-width: 768px) {
+  body {
+    font-family: "Lato", sans-serif;
+  }
+
+  #desktopHid {
+    display: none;
+  }
+
+  /* ========== Navbar ======== */
+  #menu .fa-bars {
+    display: none;
+  }
+
+  #top-nav {
+    background-color: rgb(82 82 82);
+    color: #fff;
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+    padding: 5px 10%;
+    height: 30px;
+    align-items: center;
+  }
+
+  .logo > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #272a31;
+  }
+
+  .list-item li a:hover {
+    color: #ec5242;
+    cursor: pointer;
+  }
+
+  #top-nav > a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* ========== Bottom nav =========== */
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 5px 10%;
+    align-items: center;
+    height: 80px;
+  }
+
+  .logo > p {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .imgLogo {
+    width: 20%;
+    object-fit: cover;
+  }
+
+  .lists {
+    display: flex;
+    gap: 5px;
+    height: 60px;
+    align-items: center;
+  }
+
+  .list-item {
+    display: flex;
+    gap: 10px;
+  }
+
+  .list-item li {
+    list-style-type: none;
+    font-size: 16px;
+  }
+
+  .lists button {
+    width: 135px;
+    height: 50px;
+    border: 4px solid #ec5242;
+    background: #fff;
+    color: #ec5242;
+    padding: 5px 10px;
+  }
+
+  .programBtn button {
+    display: none;
+  }
+
+  .speakers button {
+    display: none;
+  }
+
+  .lists > button:hover {
+    background: #ec5242;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* ========== Introduction =========  */
+
+  .intro {
+    padding: 5% 10%;
+  }
+
+  #intro-description {
+    width: 55%;
+    margin-bottom: 10px;
+    line-height: 23px;
+  }
+
+  .bold {
+    margin: 10px 0 0 0;
+  }
+
+  /* ========== Main Program Section ========= */
+  .program-heading {
+    padding: 25px 0 0 0;
+  }
+
+  .program-card-parent {
+    display: flex;
+    gap: 10px;
+    padding: 4% 10%;
+  }
+
+  .program-bg {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    width: 20%;
+    height: 235px;
+  }
+
+  .program-icon {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .program-bg > p {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .programBtn > p {
+    color: #fff;
+    font-size: 20px;
+    display: block;
+  }
+
+  .programBtn > p:hover {
+    color: #ec5242;
+  }
+
+  /* ========== Features Speaker ========== */
+  .speaker-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 40px;
+    padding: 5%;
+  }
+
+  .speaker-parent .speaker-intro:nth-child(n+2) {
+    display: flex;
+  }
+
+  .speaker-mobile {
+    display: flex;
+  }
+
+  .speakerImg > img {
+    width: 150px;
+    height: 135px;
+    object-fit: cover;
+  }
+
+  .imgPosition {
+    width: 100%;
+    height: 60%;
+    top: 5%;
+  }
+
+  .speaker-description {
+    width: 300px;
+    height: 130px;
+  }
+
+  /* ========= Partner section ========= */
+  .partners {
+    padding: 20px 0;
+  }
+
+  .sponsorImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 100px 0;
+  }
+
+  .sponsorImg > img {
+    width: 10%;
+  }
+
+  /* ========== Footer Section ========== */
+  .lastSection {
+    justify-content: space-between;
+  }
+}
